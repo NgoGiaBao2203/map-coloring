@@ -32,7 +32,7 @@
   * **Degree Heuristic:** Ưu tiên chọn khu vực có nhiều láng giềng chưa tô màu nhất (để sớm phát hiện lỗi).
   * **Least Constraining Value (LCV):** Khi chọn màu, chọn màu nào ít gây ảnh hưởng đến các lựa chọn của các khu vực láng giềng nhất.
   
-### 📌 Tài, Bảo, Thành: Cài đặt thuật toán và Đánh giá
+### Tài, Bảo, Thành: Cài đặt thuật toán và Đánh giá
 **Trọng tâm:** Lập trình giải pháp và chứng minh hiệu quả của thuật toán.
 
 * **Cài đặt thuật toán Backtracking:** Lập trình quy trình quay lui cốt lõi để giải quyết bài toán trên danh sách các biến đã được mô hình hóa.
