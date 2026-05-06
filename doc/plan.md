@@ -41,9 +41,9 @@
 *   **Ngày 5 (09/05) - Hoàn thành**
     *   Thành: Hoàn thiện Slide thuyết trình (PPT).
     *   Cả nhóm: Kiểm tra lại toàn bộ code, test lại.
-*   **Ngày 6 (12/05) - Hoàn thành**
-    *   Kiểm tra lần cuối cunFFfFg trước khi báo cáo.
-    *   Bảo: Kiểm tra lại toàn bộ code, clean code (xóa comment rác), merge tất cả lên nhánh `develop`. Hoàn đề tài!
+*   **Ngày 6 (12/05) - Chính thức hoàn thành - Báo cáo**
+    *   Kiểm tra lần cuối trước khi báo cáo.
+    *   Bảo: Kiểm tra lại toàn bộ code, clean code, merge tất cả lên nhánh `develop`. Hoàn đề tài!
 ## 4. Ghi Chù
 *   Các thành viên tuân thủ đúng nội quy Git (`git_rules.md`) khi push/pull code.
 *   Nếu gặp khó khăn/bug quá 1 ngày chưa fix được, lập tức báo cáo cho Leader để được support, tránh làm trễ tiến độ chung.
