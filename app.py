@@ -8,7 +8,7 @@ class MapColoringCSP:
         self.colors = colors
         self.neighbors = neighbors
         self.steps = []  # Lưu lại lịch sử các bước để tạo animation trên web
-
+#Bao GIa
     def is_valid(self, variable, color, assignment):
         for neighbor in self.neighbors.get(variable, []):
             if neighbor in assignment and assignment[neighbor] == color:
