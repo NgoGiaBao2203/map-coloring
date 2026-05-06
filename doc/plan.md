@@ -15,7 +15,7 @@
 | **1** | **Ngô Gia Bảo**       | 239922 | Leader / Backend  | - Khởi tạo source base (Flask, Git flow).<br>- Tích hợp Heuristic (ưu tiên khu vực nhiều ràng buộc) vào core AI.<br>- Viết API Endpoint (`app.py`) để giao tiếp với Frontend.<br>- Code Review và Merge code vào nhánh `develop`. |
 | **2** | **Hồ Văn Tài**        | 233015 | Dev AI / Backend  | - Thiết kế cấu trúc dữ liệu đồ thị (Graph) cho bản đồ.<br>- Lập trình core AI: Áp dụng thuật toán Backtracking.<br>- Hỗ trợ test luồng dữ liệu thuật toán.                                                                        |
 | **3** | **Dương Trí Thành**   | 233012 | Dev JS / PPT      | - Xử lý logic file `script.js`: Fetch API từ Python.<br>- Lập trình hiệu ứng (Animation) tô màu từng bước lên bản đồ.<br>- Thiết kế Slide thuyết trình (PPT).                                                                     |
-| **4** | **Đặng Lê Thuỳ Dung** | 232836 | Dev UI / Document | - Phối hợp code Frontend: giao diện khung `index.html` và định dạng `style.css`.<br>- Viết tài liệu thuật toán.                                                                                                                   |
+| **4** | **Đặng Lê Thuỳ Dung** | 232836 | Dev UI / Document | - Phối hợp code Frontend: giao diện khung `index.html` và định dạng `style.css`.<br>- Viết tài liệu thuật toán.<br>- Mô hình hóa bài toán thành bài toán thỏa mãn ràng buộc (CSP)                                                 |
 | **5** | **Lê Thị Như Ý**      | 232948 | Dev UI / Data     | - Tìm kiếm, xử lý file bản đồ SVG, gắn ID cho các vùng.<br>- Phối hợp code Frontend: hỗ trợ `index.html` và `style.css`.<br>- Viết tài liệu hướng dẫn chạy dự án (`README.md`).                                                   |
 
 ---
