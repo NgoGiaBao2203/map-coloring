@@ -44,6 +44,6 @@
 *   **Ngày 6 (12/05) - Chính thức hoàn thành - Báo cáo**
     *   Kiểm tra lần cuối trước khi báo cáo.
     *   Bảo: Kiểm tra lại toàn bộ code, clean code, merge tất cả lên nhánh `develop`. Hoàn đề tài!
-## 4. Ghi Chù
+## 4. Ghi Chú
 *   Các thành viên tuân thủ đúng nội quy Git (`git_rules.md`) khi push/pull code.
 *   Nếu gặp khó khăn/bug quá 1 ngày chưa fix được, lập tức báo cáo cho Leader để được support, tránh làm trễ tiến độ chung.
