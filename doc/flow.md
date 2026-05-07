@@ -1,3 +1,8 @@
+> **Author:** Ngô Gia Bảo
+> **Created:** 05/05/2026  
+> **Last Updated:** 05/05/2026   
+> **Version:** 1.0.0
+
 # LUỒNG HOẠT ĐỘNG CỦA HỆ THỐNG (SYSTEM FLOW)
 
 Dự án Map Coloring áp dụng kiến trúc Client - Server cơ bản:

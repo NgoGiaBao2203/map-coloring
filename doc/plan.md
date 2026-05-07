@@ -1,3 +1,8 @@
+> **Author:** Ngô Gia Bảo
+> **Created:** 05/05/2026  
+> **Last Updated:** 07/05/2026   
+> **Version:** 1.0.1
+
 # KẾ HOẠCH VÀ PHÂN CÔNG ĐỒ ÁN: MAP COLORING
 
 ## 1. Thông Tin Chung
@@ -10,13 +15,13 @@
 
 ## 2. Bảng Phân Công Công Việc Chi Tiết
 
-|  STT  | Họ và Tên             |  MSSV  | Vai trò           | Chi tiết công việc (Tasks)                                                                                                                                                                                                        |
-| :---: | :-------------------- | :----: | :---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1** | **Ngô Gia Bảo**       | 239922 | Leader / Backend  | - Khởi tạo source base (Flask, Git flow).<br>- Tích hợp Heuristic (ưu tiên khu vực nhiều ràng buộc) vào core AI.<br>- Viết API Endpoint (`app.py`) để giao tiếp với Frontend.<br>- Code Review và Merge code vào nhánh `develop`. |
-| **2** | **Hồ Văn Tài**        | 233015 | Dev AI / Backend  | - Thiết kế cấu trúc dữ liệu đồ thị (Graph) cho bản đồ.<br>- Lập trình core AI: Áp dụng thuật toán Backtracking.<br>- Hỗ trợ test luồng dữ liệu thuật toán.                                                                        |
-| **3** | **Dương Trí Thành**   | 233012 | Dev JS / PPT      | - Xử lý logic file `script.js`: Fetch API từ Python.<br>- Lập trình hiệu ứng (Animation) tô màu từng bước lên bản đồ.<br>- Thiết kế Slide thuyết trình (PPT).                                                                     |
-| **4** | **Đặng Lê Thuỳ Dung** | 232836 | Dev UI / Document | - Phối hợp code Frontend: giao diện khung `index.html` và định dạng `style.css`.<br>- Viết tài liệu thuật toán.<br>- Mô hình hóa bài toán thành bài toán thỏa mãn ràng buộc (CSP)                                                 |
-| **5** | **Lê Thị Như Ý**      | 232948 | Dev UI / Data     | - Tìm kiếm, xử lý file bản đồ SVG, gắn ID cho các vùng.<br>- Phối hợp code Frontend: hỗ trợ `index.html` và `style.css`.<br>- Viết tài liệu hướng dẫn chạy dự án (`README.md`).                                                   |
+|  STT  | Họ và Tên             |  MSSV  | Vai trò             | Chi tiết công việc (Tasks)                                                                                                                                                                                                        |
+| :---: | :-------------------- | :----: | :------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1** | **Ngô Gia Bảo**       | 239922 | Leader / Backend    | - Khởi tạo source base (Flask, Git flow).<br>- Tích hợp Heuristic (ưu tiên khu vực nhiều ràng buộc) vào core AI.<br>- Viết API Endpoint (`app.py`) để giao tiếp với Frontend.<br>- Code Review và Merge code vào nhánh `develop`. |
+| **2** | **Hồ Văn Tài**        | 233015 | Backend             | - Thiết kế cấu trúc dữ liệu đồ thị (Graph) cho bản đồ.<br>- Lập trình core AI: Áp dụng thuật toán Backtracking.<br>- Hỗ trợ test luồng dữ liệu thuật toán.                                                                        |
+| **3** | **Dương Trí Thành**   | 233012 | Frontend / PPT      | - Xử lý logic file `script.js`: Fetch API từ Python.<br>- Lập trình hiệu ứng (Animation) tô màu từng bước lên bản đồ.<br>- Thiết kế Slide thuyết trình (PPT).                                                                     |
+| **4** | **Đặng Lê Thuỳ Dung** | 232836 | Frontend / Document | - Giao diện khung `index.html` và định dạng `style.css`.<br>- Viết tài liệu thuật toán.<br>- Mô hình hóa bài toán thành bài toán thỏa mãn ràng buộc (CSP)                                                                         |
+| **5** | **Lê Thị Như Ý**      | 232948 | Frontend / Document | - Tìm kiếm, xử lý file bản đồ SVG, gắn ID cho các vùng.<br>- Phối hợp code Frontend: hỗ trợ `index.html` và `style.css`.<br>- Viết tài liệu hướng dẫn chạy dự án (`run-project.md`).                                              |
 
 ---
 
@@ -37,13 +42,13 @@
 *   **Ngày 4 (08/05) - Fix Bug & Tài liệu:**
     *   Cả nhóm: Chạy thử toàn bộ luồng (Bấm nút -> Gọi API -> Trả kết quả -> Tô màu). Fix các lỗi phát sinh.
     *   Dung: Bắt đầu viết các file Document trong thư mục `doc/`.
-    *   Ý: Viết `README.md`.
+    *   Ý: Viết `run-project.md`.
 *   **Ngày 5 (09/05) - Hoàn thành**
     *   Thành: Hoàn thiện Slide thuyết trình (PPT).
     *   Cả nhóm: Kiểm tra lại toàn bộ code, test lại.
 *   **Ngày 6 (12/05) - Chính thức hoàn thành - Báo cáo**
     *   Kiểm tra lần cuối trước khi báo cáo.
-    *   Bảo: Kiểm tra lại toàn bộ code, clean code, merge tất cả lên nhánh `develop`. Hoàn đề tài!
+    *   Bảo: Kiểm tra lại toàn bộ code, clean code, merge tất cả lên nhánh `develop`. Hoàn thành đề tài!
 ## 4. Ghi Chú
 *   Các thành viên tuân thủ đúng nội quy Git (`git_rules.md`) khi push/pull code.
 *   Nếu gặp khó khăn/bug quá 1 ngày chưa fix được, lập tức báo cáo cho Leader để được support, tránh làm trễ tiến độ chung.

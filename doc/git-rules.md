@@ -1,3 +1,8 @@
+> **Author:** Ngô Gia Bảo
+> **Created:** 05/05/2026  
+> **Last Updated:** 07/05/2026   
+> **Version:** 1.0.1
+
 # Source Code Management Rules (Git Rules)
 
 To ensure the project's source code remains clean, stable, and to avoid conflicts during teamwork, all members must read carefully and strictly follow the rules below.
@@ -16,9 +21,10 @@ When receiving a new task (developing a new feature or fixing a bug), you must c
 *   **Syntax:** 
 *   Create a new feature: `feature/v1/<branch-name-to-create>`
 *   Fix a code bug: `bugfix/v1/<branch-name-to-fix>`
+*   Document: `document/v1/<branch-name-to-doc>`
 *   **Examples:** 
     *   `feature/v1/map-ui`
-    *   `feature/v1/color-api`
+    *   `document/v1/run-project`
     *   `bugfix/v1/display-issue`
 
 *(Note: Branch names must be lowercase, without accents, and words separated by hyphens `-`).*
@@ -68,9 +74,10 @@ Khi nhận task mới (làm tính năng mới hoặc sửa lỗi), bắt buộc 
 *   **Cú pháp:**  
 *   Tạo tính năng mới `feature/v1/<tên-nhánh-cần-tạo>`
 *   Sửa lỗi code `bugfix/v1/<tên-nhánh-cần-fix>`
+*   Tài liệu: `document/v1/<tên-nhánh-cần-tài-liệu>`
 *   **Ví dụ:** 
     *   `feature/v1/map-ui`
-    *   `feature/v1/color-api`
+    *   `document/v1/run-project`
     *   `bugfix/v1/display-issue`
 
 *(Lưu ý: Tên nhánh viết thường, không dấu, các từ cách nhau bằng dấu gạch ngang `-`).*
