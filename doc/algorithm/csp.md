@@ -1,6 +1,6 @@
 > **Author:** Đặng Lê Thùy Dung
-> **Created:** 05/05/2026  
-> **Last Updated:** 05/05/2026   
+> **Created:** 07/05/2026  
+> **Last Updated:** 07/05/2026   
 > **Version:** 1.0.0
 
 # Mô hình CSP (Constraint Satisfaction Problem)
