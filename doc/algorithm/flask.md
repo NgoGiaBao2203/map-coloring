@@ -1,6 +1,6 @@
-> **Author:** Lê Thị Như Ý
-> **Created:** 07/05/2026
-> **Last Updated:** 07/05/2026
+> **Author:** Lê Thị Như Ý  
+> **Created:** 07/05/2026  
+> **Last Updated:** 07/05/2026  
 > **Version:** 1.0.0
 
 # Backend với Flask
@@ -30,7 +30,7 @@ Quy trình hoạt động của hệ thống như sau:
 1. Người dùng bấm nút “Tô màu” trên giao diện  
 2. Frontend gửi request đến server Flask  
 3. Flask nhận request và xử lý  
-4. Thuật toán Backtracking được thực thi  
+4. Thuật toán Backtracking kết hợp Heuristic được thực thi  
 5. Kết quả được trả về dưới dạng JSON  
 6. Frontend nhận dữ liệu và hiển thị màu lên bản đồ  
 
@@ -53,8 +53,8 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-@app.route('/color', methods=['GET'])
-def color_map():
+@app.route('/api/solve', methods=['GET'])
+def solve_map_api():
     result = solve_map()  # gọi hàm xử lý thuật toán
     return jsonify(result)
 
