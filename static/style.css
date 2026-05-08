@@ -1,6 +1,312 @@
 /*
-Author: [Your Name]
-Created: [DD/MM/YYYY]
-Last Updated: [DD/MM/YYYY]
+Author 1:  Đặng Lê Thùy Dung
+Author 2:  
+Created: 08/05/2026
+Last Updated: 08/05/2026
 Version: 1.0.0
 */
+
+/* ========================================== */
+/* 1. RESET VÀ KHAI BÁO BIẾN (VARIABLES)      */
+/* ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  /* Các biến màu sắc để dễ dàng thay đổi theme sau này */
+  --bg-color: #f0f2f5;
+  --card-bg: #ffffff;
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --secondary-color: #e5e7eb;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --success: #10b981;
+  --danger: #ef4444;
+  --border-radius: 12px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ========================================== */
+/* 2. HEADER: THANH ĐIỀU HƯỚNG PHÍA TRÊN      */
+/* ========================================== */
+.navbar {
+  background-color: var(--card-bg);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-area h1 {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.logo-area p {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+/* Khu vực chứa nút chức năng */
+.action-area {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Ẩn input file mặc định để dùng label làm nút bấm cho đẹp */
+input[type="file"] {
+  display: none;
+}
+
+.file-label {
+  padding: 10px 15px;
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.file-label:hover {
+  background-color: #d1d5db;
+}
+
+/* Định dạng các nút bấm chính/phụ */
+.btn-primary {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* ========================================== */
+/* 3. MAIN CONTENT: BỐ CỤC CHUNG              */
+/* ========================================== */
+.container {
+  flex: 1;
+  display: grid;
+  /* Chia lưới: Cột trái (bản đồ) chiếm 2 phần, cột phải (log) chiếm 1 phần */
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px 30px;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Card: Khung viền trắng bao quanh từng khu vực */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-header h2 {
+  font-size: 18px;
+}
+
+.badge {
+  background-color: #e0e7ff;
+  color: var(--primary-color);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ========================================== */
+/* 4. CỘT TRÁI: KHU VỰC ẢNH GỐC VÀ CANVAS     */
+/* ========================================== */
+.map-comparison {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Khi JS thêm class này, nó sẽ chia thành 2 cột nằm ngang */
+.map-comparison.has-image {
+  grid-template-columns: 1fr 1fr;
+}
+
+.preview-box,
+.canvas-wrapper {
+  background-color: #f9fafb;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  min-height: 400px;
+}
+
+.preview-box h3,
+.canvas-wrapper h3 {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+  font-weight: 700;
+  text-align: center;
+}
+
+.preview-box img {
+  width: 100%;
+  height: auto;
+  max-height: 550px;
+  border-radius: 6px;
+  object-fit: contain;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.canvas-wrapper {
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* Fix lỗi responsive: Ép canvas co giãn theo khung chứa */
+canvas {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+  max-height: 550px;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+/* ========================================== */
+/* 5. CỘT PHẢI: KHU VỰC LOG LỊCH SỬ CHẠY      */
+/* ========================================== */
+.logs-section {
+  max-height: calc(100vh - 120px);
+}
+
+.step-counter {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-light);
+}
+
+.step-counter span {
+  color: var(--primary-color);
+}
+
+.logs-container {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 5px;
+  margin-bottom: 15px;
+}
+
+/* Tùy chỉnh thanh cuộn (Scrollbar) */
+.logs-container::-webkit-scrollbar {
+  width: 6px;
+}
+.logs-container::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* Từng dòng log */
+.log-item {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f9fafb;
+  border-left: 4px solid #d1d5db;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Màu sắc của log phụ thuộc vào loại hành động (assign, backtrack...) */
+.log-item.assign {
+  border-left-color: var(--success);
+  background-color: #ecfdf5;
+}
+
+.log-item.backtrack {
+  border-left-color: var(--danger);
+  background-color: #fef2f2;
+}
+
+.log-item.complete {
+  border-left-color: var(--primary-color);
+  background-color: #e0e7ff;
+  font-weight: bold;
+}
+
+.log-highlight {
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 2px solid #f3f4f6;
+}
