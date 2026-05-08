@@ -1,16 +1,81 @@
 <!--
-Author: [Your Name]
-Created: [DD/MM/YYYY]
-Last Updated: [DD/MM/YYYY]
+Author:  Đặng Lê Thùy Dung
+Created: 08/05/2026
+Last Updated: 08/05/2026
 Version: 1.0.0
 -->
 
 <!doctype html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Map Coloring CSP Solver</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <header class="navbar">
+      <div class="logo-area">
+        <h1>Map Coloring CSP</h1>
+        <p>Thuật toán CSP giải quyết bài toán tô màu bản đồ</p>
+      </div>
+      <div class="action-area">
+        <label for="imageInput" class="file-label">📁 Chọn ảnh bản đồ</label>
+        <input type="file" id="imageInput" accept="image/*" />
+        <button id="solveBtn" class="btn-primary" onclick="uploadImage()">
+          Upload & Giải
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card map-section">
+        <div class="card-header">
+          <h2>Khu vực Bản đồ</h2>
+          <span class="badge" id="info" style="display: none"></span>
+        </div>
+
+        <div class="map-comparison" id="mapComparison">
+          <div class="preview-box" id="imagePreview" style="display: none">
+            <h3>Ảnh gốc tải lên</h3>
+            <img id="previewImg" alt="Original Map" />
+          </div>
+
+          <div class="canvas-wrapper">
+            <h3>Bản đồ được tô màu</h3>
+            <canvas id="canvas" width="1000" height="700"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="card logs-section">
+        <div class="card-header">
+          <h2>Quá trình giải</h2>
+          <div class="step-counter">
+            Bước: <span id="stepCount">0</span> / <span id="totalSteps">0</span>
+          </div>
+        </div>
+
+        <div class="logs-container" id="logs">
+          <div class="log-item default">Vui lòng tải ảnh lên để bắt đầu...</div>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn-secondary" onclick="resetVisualization()">
+            Chạy lại từ đầu
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Thuật toán CSP giải quyết bài toán tô màu bản đồ.</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+  </body>
 </html>
