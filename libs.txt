@@ -1,13 +1,13 @@
 # ==========================================
-# DANH SÁCH THƯ VIỆN CHO DỰ ÁN MAP-COLOR
-# Chạy lệnh: pip install -r libs.txt
+# DANH SACH THU VIEN CHO DU AN MAP-COLOR
+# Chay lenh: py -m pip install -r libs.txt
 # ==========================================
 
-# 1. Framework tạo Web Server (xử lý API, giao diện, routing)
+# 1. Framework tao Web Server (API, giao dien)
 flask
 
-# 2. Thư viện Xử lý ảnh (đọc ảnh, tìm viền đen, bóc tách các vùng)
+# 2. Xu ly anh (tim vien den, boc tach vung)
 opencv-python
 
-# 3. Thư viện tính toán ma trận số (công cụ hỗ trợ bắt buộc của OpenCV để xử lý điểm ảnh)
+# 3. Tinh toan ma tran so (ho tro cho OpenCV)
 numpy
