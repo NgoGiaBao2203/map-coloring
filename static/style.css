@@ -1,9 +1,9 @@
 /*
 Author 1:  Đặng Lê Thùy Dung
-Author 2:  
+Author 2:  Lê Thị Như Ý
 Created: 08/05/2026
-Last Updated: 08/05/2026
-Version: 1.0.0
+Last Updated: 09/05/2026
+Version: 1.0.1
 */
 
 /* ========================================== */
@@ -309,4 +309,85 @@ canvas {
   margin-top: auto;
   padding-top: 15px;
   border-top: 2px solid #f3f4f6;
+}
+
+/* ========================================== */
+/* 6. FOOTER: CHÂN TRANG                      */
+/* ========================================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/* ========================================== */
+/* 7. RESPONSIVE: ĐIỀU CHỈNH CHO MOBILE/TABLET*/
+/* ========================================== */
+
+/* Màn hình Laptop nhỏ / Tablet ngang */
+@media (max-width: 1200px) {
+  .map-comparison.has-image {
+    grid-template-columns: 1fr; /* Trả về 1 cột dọc */
+  }
+}
+
+/* Màn hình Tablet dọc */
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr; /* Dồn hết thành 1 cột */
+    padding: 15px;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .action-area {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .logs-section {
+    max-height: 500px;
+  }
+}
+
+/* Màn hình Điện thoại (Mobile) */
+@media (max-width: 576px) {
+  .action-area {
+    flex-direction: column;
+    width: 100%;
+  }
+  .file-label,
+  .btn-primary {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .container {
+    padding: 10px;
+  }
+  .card {
+    padding: 15px;
+  }
+  .preview-box,
+  .canvas-wrapper {
+    min-height: 250px;
+    padding: 10px;
+  }
+  .logo-area h1 {
+    font-size: 20px;
+  }
+}
+
+/* Hiệu ứng mờ dần khi xuất hiện dòng log mới */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
