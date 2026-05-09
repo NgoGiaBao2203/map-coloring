@@ -54,6 +54,10 @@ function displayImagePreview(file) {
     const img = document.getElementById("previewImg");
     const mapComparison = document.getElementById("mapComparison");
 
+    img.onload = () => {
+      setCanvasSize(img.naturalWidth, img.naturalHeight);
+    };
+
     img.src = e.target.result;
     preview.style.display = "flex"; // Hiện vùng chứa ảnh
 
@@ -61,6 +65,13 @@ function displayImagePreview(file) {
     mapComparison.classList.add("has-image");
   };
   reader.readAsDataURL(file);
+}
+
+// Đồng bộ kích thước canvas với kích thước ảnh gốc
+function setCanvasSize(width, height) {
+  const canvas = document.getElementById("canvas");
+  canvas.width = width;
+  canvas.height = height;
 }
 
 // Hàm gửi ảnh lên Backend qua API /upload
@@ -88,7 +99,16 @@ function uploadImage() {
     method: "POST",
     body: formData,
   })
-    .then((res) => res.json())
+    .then(async (res) => {
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || "Lỗi khi tải ảnh lên");
+      }
+      if (data.error) {
+        throw new Error(data.error);
+      }
+      return data;
+    })
     .then((data) => {
       // Nhận dữ liệu và gán vào biến toàn cục
       currentRegions = JSON.parse(JSON.stringify(data.regions));
@@ -115,7 +135,7 @@ function uploadImage() {
     })
     .catch((error) => {
       console.error("Error:", error);
-      alert("Đã xảy ra lỗi khi tải ảnh lên máy chủ!");
+      alert(`Đã xảy ra lỗi: ${error.message}`);
       btn.disabled = false;
       btn.innerHTML = originalText;
     });
