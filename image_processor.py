@@ -9,8 +9,19 @@ import cv2
 import numpy as np
 import os
 
+# =========================
+# KIỂM TRA NỀN ẢNH
+# =========================
 def is_white_background_black_border(gray):
-    # Kiểm tra ảnh có nền trắng và viền đen không
+    """
+    Kiểm tra ảnh có nền trắng và viền đen.
+
+    Args:
+        gray (numpy.ndarray): Ảnh xám đầu vào.
+
+    Returns:
+        bool: True nếu ảnh thỏa điều kiện nền trắng và viền đen. False nếu không.
+    """
     h, w = gray.shape
     margin = max(1, min(h, w) // 20)  # Lề kiểm tra (5% cạnh nhỏ nhất)
 
@@ -37,8 +48,19 @@ def is_white_background_black_border(gray):
 
     return True
 
+# =========================
+# XỬ LÝ ẢNH VÀ TẠO GRAPH
+# =========================
 def process_image(image_path):
-    # Xử lý ảnh để tìm các vùng bản đồ và tạo graph láng giềng
+    """
+    Đọc ảnh và xây dựng cấu trúc vùng bản đồ cùng danh sách láng giềng.
+
+    Args:
+        image_path (str): Đường dẫn tới file ảnh đầu vào.
+
+    Returns:
+        dict hoặc None: Dữ liệu vùng nếu xử lý thành công, None nếu ảnh không hợp lệ.
+    """
 
     # =========================
     # ĐỌC ẢNH
