@@ -76,6 +76,11 @@ def upload():
         regions
     )
 
+    if solution is None:
+        return jsonify({
+            "error": "Không thể tô màu ảnh này. Ảnh có thể quá phức tạp, bị nhiễu, hoặc không đáp ứng yêu cầu (nền trắng, viền đen rõ). Hãy thử PNG hoặc cải thiện chất lượng ảnh."
+        }), 400
+
     # gán màu cuối
     for node in solution:
 
