@@ -1,7 +1,7 @@
 > **Author:** Ngô Gia Bảo
 > **Created:** 05/05/2026  
-> **Last Updated:** 09/05/2026  
-> **Version:** 1.1.0
+> **Last Updated:** 10/05/2026  
+> **Version:** 1.2.0
 
 # LUỒNG HOẠT ĐỘNG CỦA HỆ THỐNG (SYSTEM FLOW)
 
@@ -64,8 +64,7 @@ Cấu trúc chuẩn của chuỗi JSON mà Backend (`app.py`) trả về cho Fro
 {
   "regions": {
     "0": {"neighbors": [1, 2], "points": [[x,y], ...], "color": "red"},
-    "1": {"neighbors": [0, 2], "points": [[x,y], ...], "color": "blue"},
-    ...
+    "1": {"neighbors": [0, 2], "points": [[x,y], ...], "color": "blue"}
   },
   "steps": [
     {"type": "select", "node": 0, "message": "Chọn vùng 0"},
@@ -91,6 +90,14 @@ Cấu trúc chuẩn của chuỗi JSON mà Backend (`app.py`) trả về cho Fro
 ```json
 {
   "error": "Không có file"
+}
+```
+
+**Lỗi (Không thể giải CSP - Status 400):**
+
+```json
+{
+  "error": "Không thể tô màu ảnh này. Ảnh có thể quá phức tạp, bị nhiễu, hoặc không đáp ứng yêu cầu (nền trắng, viền đen rõ). Hãy thử PNG hoặc cải thiện chất lượng ảnh."
 }
 ```
 
