@@ -1,7 +1,7 @@
 > **Author:** Lê Thị Như Ý  
 > **Created:** 06/05/2026  
 > **Last Updated:** 10/05/2026  
-> **Version:** 1.0.0
+> **Version:** 1.1.0
 
 # HƯỚNG DẪN CHẠY DỰ ÁN: MAP COLORING
 
