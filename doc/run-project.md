@@ -5,28 +5,7 @@
 
 # HƯỚNG DẪN CHẠY DỰ ÁN: MAP COLORING
 
-## 1. Thông Tin Chung
-
-* **Tên đề tài:** Giải bài toán tô màu bản đồ (Map Coloring) bằng thuật toán Backtracking kết hợp Heuristic.
-* **Mục tiêu:** Xây dựng hệ thống tô màu bản đồ sao cho các vùng kề nhau không trùng màu.
-* **Công nghệ sử dụng:** Python (Flask), JavaScript, HTML/CSS.
-* **Môi trường phát triển:** Visual Studio Code.
-* **Người thực hiện tài liệu:** Lê Thị Như Ý.
-
----
-
-## 2. Yêu Cầu Hệ Thống
-
-Để chạy được dự án, máy tính cần đáp ứng các yêu cầu sau:
-
-* Đã cài đặt **Python >= 3.10**
-* Có sẵn **pip** để cài thư viện Python
-* Có cài đặt **Visual Studio Code** (khuyến khích)
-* Có trình duyệt web (Chrome, Edge,...)
-
----
-
-## 3. Danh Sách Thư Viện Sử Dụng
+## 1. Danh Sách Thư Viện Sử Dụng
 
 Dự án sử dụng các thư viện sau:
 
@@ -36,7 +15,7 @@ Dự án sử dụng các thư viện sau:
 
 ---
 
-## 4. Các Bước Cài Đặt Và Chạy Dự Án
+## 2. Các Bước Cài Đặt Và Chạy Dự Án
 
 ### Bước 1: Clone source code
 
@@ -117,34 +96,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 5. Cấu Trúc Thư Mục Dự Án
-
-| Thư mục / File | Chức năng |
-|---|---|
-| `app.py` | Xử lý Backend Flask |
-| `solver.py` | Thuật toán Backtracking + Heuristic |
-| `image_processor.py` | Xử lý ảnh bản đồ |
-| `templates/index.html` | Giao diện chính |
-| `static/script.js` | Logic frontend và animation |
-| `static/style.css` | Thiết kế giao diện |
-| `libs.txt` | Danh sách thư viện cần cài |
-| `doc/run-project.md` | Tài liệu hướng dẫn chạy dự án |
-
----
-
-## 6. Quy Trình Hoạt Động Hệ Thống
-
-* Người dùng truy cập giao diện web
-* Hệ thống tải dữ liệu bản đồ
-* Người dùng nhấn nút chạy thuật toán
-* Frontend gửi request đến Flask Backend
-* Backend xử lý thuật toán Backtracking kết hợp Heuristic
-* Kết quả trả về dưới dạng JSON
-* Giao diện hiển thị quá trình tô màu bằng animation
-
----
-
-## 7. Các Lỗi Thường Gặp Và Cách Khắc Phục
+## 3. Các Lỗi Thường Gặp Và Cách Khắc Phục
 
 ### Lỗi 1: Không tìm thấy Flask
 
@@ -240,7 +192,7 @@ ls
 
 ---
 
-## 8. Ghi Chú
+## 4. Ghi Chú
 
 * Không thay đổi tên thư mục `templates` và `static`
 * Đảm bảo đã cài đầy đủ thư viện trước khi chạy
@@ -249,6 +201,6 @@ ls
 
 ---
 
-## 9. Kết Luận
+## 5. Kết Luận
 
 Tài liệu này hướng dẫn cách cài đặt và chạy dự án Map Coloring trên môi trường local. Người dùng chỉ cần cài đầy đủ thư viện, chạy Flask Server và truy cập localhost để sử dụng hệ thống.
