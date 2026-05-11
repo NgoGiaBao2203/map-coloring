@@ -1,8 +1,8 @@
 /*
 Author: Dương Trí Thành
 Created: 09/05/2026
-Last Updated: 09/05/2026
-Version: 1.0.0
+Last Updated: 10/05/2026
+Version: 1.1.0
 */
 
 /* ========================================== */
@@ -330,4 +330,56 @@ function resetVisualization() {
   setTimeout(() => {
     playSteps();
   }, 300);
+}
+
+// Hàm bỏ qua animation và hiển thị kết quả ngay
+function skipToResult() {
+  if (steps.length === 0) {
+    alert("Chưa có dữ liệu!");
+    return;
+  }
+
+  // Dừng animation nếu đang chạy
+  isPlaying = false;
+
+  // Đặt lại từ đầu
+  stepIndex = 0;
+  currentRegions = JSON.parse(JSON.stringify(finalRegions));
+
+  // Xóa toàn bộ màu
+  for (let key in currentRegions) {
+    delete currentRegions[key].color;
+  }
+
+  // Xóa log
+  clearLogs();
+
+  // Lặp qua tất cả các bước mà không delay
+  for (let i = 0; i < steps.length; i++) {
+    const step = steps[i];
+
+    // Chỉ ghi log các bước assign và backtrack, bỏ qua "try" và "select" để log gọn gàng
+    if (
+      step.type === "assign" ||
+      step.type === "backtrack" ||
+      step.type === "success" ||
+      step.type === "info"
+    ) {
+      addLog(step.message, getLogType(step.type));
+    }
+
+    // Áp dụng logic tô màu
+    if (step.type === "assign") {
+      currentRegions[step.node].color = step.color;
+    } else if (step.type === "backtrack") {
+      delete currentRegions[step.node].color;
+    }
+  }
+
+  // Cập nhật số bước
+  stepIndex = steps.length;
+  updateStepCounter();
+
+  // Vẽ kết quả cuối cùng
+  drawMap(currentRegions);
 }
