@@ -1,7 +1,8 @@
 /*
-Author: Dương Trí Thành
+Author 1: Hồ Văn Tài
+Author 2: Dương Trí Thành
 Created: 09/05/2026
-Last Updated: 10/05/2026
+Last Updated: 11/05/2026
 Version: 1.1.0
 */
 
