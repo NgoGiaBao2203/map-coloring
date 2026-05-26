@@ -50,7 +50,7 @@ def select_unassigned_variable(assignment: dict, graph: dict) -> str:
         graph (dict): Cấu trúc đồ thị chứa thông tin các đỉnh và láng giềng.
 
     Returns:
-        str: Tên của đỉnh (node) chưa được gán màu và có số láng giềng lớn nhất.
+        str: Tên của vùng (node) chưa được gán màu và có số láng giềng lớn nhất.
     """
     # 1. Lọc ra danh sách tất cả các đỉnh chưa được gán màu
     unassigned = []
